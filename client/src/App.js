@@ -1,13 +1,16 @@
 import React, {  }  from 'react';
-import { Router, BrowserRouterasRouter } from 'react-router'
 import { DataProvider } from './GlobalState'
+import Header from './components/header/header';
+import MainPages from './components/mainpages/Pages'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     <DataProvider>
       <Router>
         <div className="App">
-          hello world
+          <Header />
+          <MainPages />
         </div>
       </Router>
     </DataProvider>
