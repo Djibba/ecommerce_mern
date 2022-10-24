@@ -15,7 +15,7 @@ function ProductItem({product}) {
 
       <div className='row_btn'>
         <Link id='btn_buy' to='#'>Acheter</Link>
-        <Link id='btn_view' to={`detail/${product._id}`}>Voir</Link>
+        <Link id='btn_view' to={`/detail/${product._id}`}>Voir</Link>
       </div>
     </div>
   )
