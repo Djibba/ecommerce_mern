@@ -16,7 +16,7 @@ function Pages() {
       <Route path='/register' exact component={Register} />
 
       <Route path='*' exact component={NotFound} />
-    </Switch>
+    </Switch> 
   )
 }
 
