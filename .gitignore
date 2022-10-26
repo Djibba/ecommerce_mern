@@ -1,5 +1,5 @@
 ./node_modules
 .env
 ./logs/backoffice.log
-./temp
+./tmp
 node_modules
