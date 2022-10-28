@@ -5,7 +5,7 @@ import menu from './icons/menu.svg'
 import cart from './icons/cart.svg'
 import close from './icons/close.svg'
 
-function header() {
+function Header() {
   return (
     <header>
       <div className='menu'>
@@ -21,7 +21,6 @@ function header() {
       <ul>
         <li><Link to="/">Produits</Link></li>
         <li><Link to="/login">Se connecter</Link></li>
-        <li><Link to="/register">Créer un compte</Link></li>
 
         <li>
           <img src={close} alt="" width="30" className='menu' />
@@ -39,4 +38,4 @@ function header() {
   )
 }
 
-export default header
+export default Header

@@ -1,6 +1,6 @@
 import React, {  }  from 'react';
 import { DataProvider } from './GlobalState'
-import Header from './components/header/header';
+import Header from './components/header/Header';
 import MainPages from './components/mainpages/Pages'
 import { BrowserRouter as Router } from 'react-router-dom';
 

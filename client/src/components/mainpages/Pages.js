@@ -4,8 +4,8 @@ import { Switch, Route } from "react-router-dom"
 import Products from './products/Product'
 import DetailProduct from './DetailProduct/DetailProduct'
 import Cart from './cart/cart'
-import Login from './auth/login'
-import Register from './auth/register'
+import Login from './auth/Login'
+import Register from './auth/Register'
 import NotFound from './utils/not_found/NotFound'
 
 function Pages() {

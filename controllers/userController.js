@@ -52,7 +52,7 @@ const register = async (req, res, next) => {
 
     } catch (err) {
         return res.status(500).json({
-            msg: err.message
+            message: err.message
         });
     }
 };
@@ -73,7 +73,6 @@ const login = async (req, res, next) => {
             return res.status(400).json({message: "L'email ou le mot de passe incorrect."});
         }
 
-        // res.json({message: "Connexion avec succes !"});
         //jwt
         const accesstoken = createAccessToken({id: user._id});
         const refreshtoken = createRefreshToken({id: user._id});
@@ -87,7 +86,7 @@ const login = async (req, res, next) => {
 
     } catch (err) {
         return res.status(500).json({
-            msg: err.message
+            message: err.message
         });
     }
 
