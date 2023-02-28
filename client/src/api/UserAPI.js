@@ -14,7 +14,9 @@ export default function UserAPI(token) {
                         headers: {Authorization: token}
                     })
 
-                    console.log(res)
+                    setIsLogged(true)
+                    res.data.role === 1 ? setIsAdmin(true) : setIsAdmin(false)
+
                 } catch (err) {
                     alert(err.response.data.message)
                 }
