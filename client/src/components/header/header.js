@@ -5,6 +5,7 @@ import menu from './icons/menu.svg'
 import cart from './icons/cart.svg'
 import close from './icons/close.svg'
 import { GlobalState } from './../../GlobalState';
+import axios from 'axios'
 // import UserAPI from './../../api/UserAPI';
 
 function Header() {
@@ -12,6 +13,13 @@ function Header() {
   const state = useContext(GlobalState)
   const [isLogged, setIsLogged] = state.userAPI.isLogged
   const [isAdmin, setIsAdmin] = state.userAPI.isAdmin
+
+  const logoutUser = async () => {
+    await axios.get('/user/logout')
+    localStorage.clear()
+    setIsAdmin(false)
+    setIsLogged(false)
+  }
 
   const adminRouter = () => {
     return (
@@ -26,7 +34,7 @@ function Header() {
     return (
       <>
         <li><Link to="/history">Historique</Link></li>
-        <li><Link to="/">Logout</Link></li>
+        <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
       </>
     )
   }
