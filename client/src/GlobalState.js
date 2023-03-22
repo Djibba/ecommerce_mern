@@ -17,6 +17,9 @@ export const DataProvider = ({children}) => {
 
     useEffect(() =>{
         const firstLogin = localStorage.getItem('firstLogin')
+        
+        setToken(firstLogin)
+
         if(firstLogin) refreshToken()
     },[])
 
