@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios  from 'axios';
 
 export default function UserAPI(token) {
@@ -16,7 +16,7 @@ export default function UserAPI(token) {
 
                     setIsLogged(true)
                     res.data.role === 1 ? setIsAdmin(true) : setIsAdmin(false)
-
+                    
                 } catch (err) {
                     alert(err.response.data.message)
                 }
@@ -24,6 +24,7 @@ export default function UserAPI(token) {
             getUser()
         }
     },[token])
+
 
   return {
         isLogged: [isLogged, setIsLogged],

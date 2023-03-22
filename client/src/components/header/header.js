@@ -10,8 +10,8 @@ import { GlobalState } from './../../GlobalState';
 function Header() {
 
   const state = useContext(GlobalState)
-  const [isLogged, setIsLogged] = state.UserAPI.isLogged
-  const [isAdmin, setIsAdmin] = state.UserAPI.isAdmin
+  const [isLogged, setIsLogged] = state.userAPI.isLogged
+  const [isAdmin, setIsAdmin] = state.userAPI.isAdmin
 
   const adminRouter = () => {
     return (
