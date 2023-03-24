@@ -6,7 +6,6 @@ import cart from './icons/cart.svg'
 import close from './icons/close.svg'
 import { GlobalState } from './../../GlobalState';
 import axios from 'axios'
-// import UserAPI from './../../api/UserAPI';
 
 function Header() {
 
@@ -34,7 +33,7 @@ function Header() {
     return (
       <>
         <li><Link to="/history">Historique</Link></li>
-        <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
+        <li><Link to="/" onClick={logoutUser}>Se déconnecter</Link></li>
       </>
     )
   }

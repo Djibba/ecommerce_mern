@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom';
+import { GlobalState } from '../../../../GlobalState';
 
 function ProductItem({product}) {
+
   return (
     <div className='product_card'>
+
+    {/* {
+      isAdmin && <input type="checkbox" checked={product.checked} />
+    } */}
 
       <img src={product.images.url} alt='' />
 
